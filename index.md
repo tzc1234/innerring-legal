@@ -1,6 +1,6 @@
 # Privacy Policy for DirectChat
 
-**Last Updated: December 18, 2024**
+**Last Updated: December 20, 2024**
 
 DirectChat ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
 
@@ -14,8 +14,7 @@ DirectChat ("we," "our," or "us") is committed to protecting your privacy. This 
 
 ### 1.2 Information Automatically Collected
 - **Device Tokens**: For sending push notifications
-- **Device Information**: Device type, operating system version for compatibility
-- **Usage Data**: Crash reports and error logs to improve app stability
+- **Device Information**: Device type and operating system version for compatibility
 - **Cache Data**: Local storage of messages and contacts for offline access
 
 ## 2. How We Use Your Information
@@ -100,12 +99,14 @@ Your information may be transferred to and maintained on servers located outside
 ## 10. Third-Party Services
 
 We use the following third-party services:
-- **Firebase (Google)**: Authentication, database, storage, cloud functions, and crash reporting
+- **Firebase (Google)**: Authentication, database (Cloud Firestore), storage (Cloud Storage), and cloud functions
 - **Apple Push Notification Service (APNs)**: Push notification delivery
 
 These services have their own privacy policies:
 - Firebase: https://firebase.google.com/support/privacy
 - Apple: https://www.apple.com/legal/privacy/
+
+We do NOT use analytics, crash reporting, or advertising services.
 
 ## 11. Changes to This Privacy Policy
 
