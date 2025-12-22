@@ -1,6 +1,6 @@
 # Privacy Policy for DirectChat
 
-**Last Updated: December 20, 2024**
+**Last Updated: December 22, 2025**
 
 DirectChat ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
 
@@ -61,7 +61,7 @@ You have the right to:
 - **Access Your Data**: View all data we have about you
 - **Update Information**: Change your profile name and picture
 - **Delete Messages**: Remove individual messages or entire conversations
-- **Delete Account**: Email us at innerring.app@gmail.com to request account deletion and removal of all associated data
+- **Delete Account**: Request account deletion directly from the app (Profile → Request Account Deletion). Your request will be processed within 7 days. You can cancel your deletion request anytime before processing. To verify deletion is complete, try signing in after 7 days - if your phone number is not registered, deletion was successful.
 - **Block Contacts**: Prevent specific users from contacting you
 - **Opt-Out of Notifications**: Disable push notifications in iOS Settings
 
@@ -70,12 +70,13 @@ You have the right to:
 - **Active Account**: Data retained while your account is active
 - **Messages**: Stored until you delete them
 - **Deleted Messages**: Permanently removed from our servers
-- **Account Deletion**: Upon request, we will:
-  - Delete your Firebase authentication credentials (you cannot sign in again)
-  - Anonymize your user profile (name changed to "Deleted User", phone number and avatar removed)
-  - Delete your contacts list and remove your contact information from all contacts' lists
-  - Delete your device tokens and profile picture
-  - Note: Your user account record will be retained in an anonymized state to preserve conversation history for your contacts. Your contacts will see you as "Deleted User" and will not be able to send you new messages. Past messages will remain visible to them.
+- **Account Deletion**: Upon request through the app, we will delete within 7 days:
+  - Your Firebase authentication credentials (you cannot sign in again)
+  - Your profile information (name changed to "Deleted User", phone number and avatar removed)
+  - Your contacts list and device tokens
+  - Your profile picture from storage
+  - Note: Your user account record will be retained in an anonymized state to preserve conversation history for your contacts. Your contacts will see you as "Deleted User" and will not be able to send you new messages. Past messages will remain visible to them. You can cancel your deletion request anytime before it is processed.
+  - A minimal deletion request record (user ID, request timestamp, and status only) is retained permanently for audit purposes. Phone numbers are removed from deletion logs immediately after processing.
 - **Local Cache**: Automatically deleted when you sign out
 - **Backup Data**: May be retained for up to 90 days for disaster recovery
 
@@ -147,15 +148,23 @@ Legal basis for processing:
 If you have questions, concerns, or requests about this Privacy Policy or your data, please contact us:
 
 **Email**: innerring.app@gmail.com
-**Response Time**: We aim to respond within 48 hours
+**Response Time**: We aim to respond within 72 hours
 
-**To Request Account Deletion**: Email us with your registered phone number and we will within 30 days:
-- Delete your authentication credentials (you will be signed out and unable to sign in again)
-- Anonymize your profile (name changed to "Deleted User", phone number and avatar removed)
-- Delete your profile picture from storage
-- Delete your contacts list and device tokens
-- Mark your account as deleted in all contacts where you appear
-- Note: An anonymized user record will be retained to preserve conversation history for your contacts. Your contacts will see you as "Deleted User" in their list and can view past conversations but cannot send new messages to you.
+**To Request Account Deletion**: Use the in-app deletion feature (Profile → Request Account Deletion). You must be signed in to request deletion for security reasons - this ensures only the account owner can delete the account. Your request will be processed within 7 days. You can cancel anytime before processing.
+
+What gets deleted:
+- Your authentication credentials (you will be signed out and unable to sign in again)
+- Your profile information (name changed to "Deleted User", phone number and avatar removed)
+- Your profile picture from storage
+- Your contacts list and device tokens
+- Your account marked as deleted in all contacts where you appear
+
+What is retained:
+- An anonymized user record to preserve conversation history for your contacts
+- Your contacts will see you as "Deleted User" and can view past conversations but cannot send new messages to you
+- A minimal deletion request record (user ID, timestamp, status) permanently for audit purposes (phone number removed after processing)
+
+**Note:** Email-based deletion requests are not accepted for security reasons. All deletions must be initiated from within the app while signed in.
 
 ---
 
