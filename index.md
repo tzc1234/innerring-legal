@@ -1,173 +1,185 @@
-# Privacy Policy for DirectChat
+# Privacy Policy for InnerRing
 
-**Last Updated: December 22, 2025**
+**Last Updated: May 12, 2026**
 
-DirectChat ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
+InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
+
+InnerRing does not use phone numbers, email addresses, public user search, advertising, analytics, or cross-app tracking. Accounts are accessed with a recovery key.
 
 ## 1. Information We Collect
 
-### 1.1 Information You Provide
-- **Phone Number**: Used for authentication and account identification
-- **Profile Information**: Name and profile picture (avatar)
-- **Messages**: Text messages you send and receive
-- **Contact Information**: Phone numbers of contacts you add to the app
+### 1.1 Account and Profile Data
 
-### 1.2 Information Automatically Collected
-- **Device Tokens**: For sending push notifications
-- **Device Information**: Device type and operating system version for compatibility
-- **Cache Data**: Local storage of messages and contacts for offline access
+- **Account ID**: A Convex user ID used to operate your account.
+- **Authentication ID**: A Clerk user ID and session ID used for sign-in and session management.
+- **Recovery key credential**: Your recovery key is used as your Clerk authentication credential. We do not store your recovery key in Convex.
+- **Profile information**: Your display name and optional avatar.
+- **Account status**: Active, deletion pending, or deleted.
+
+### 1.2 Messaging and Contact Data
+
+- **Contacts**: Invite-only 1:1 contact relationships, block state, and contact metadata.
+- **Invite codes**: Hashed invite codes, creation time, expiry time, and redemption metadata.
+- **Encrypted messages**: Message ciphertext, encryption headers, sender/recipient relationship metadata, timestamps, edit/delete/read metadata, and reaction metadata.
+- **End-to-end encryption public keys**: Public identity keys, signed prekeys, and one-time prekeys used to establish encrypted sessions.
+
+Message contents are end-to-end encrypted. We cannot read plaintext message contents from our backend.
+
+### 1.3 Device, Notification, and Local Data
+
+- **Hashed device ID**: Used for session safety, account creation rate limits, and single-device session behavior. We do not send the raw iOS device identifier to our backend.
+- **APNs push token**: Used to deliver push notifications if you allow notifications.
+- **Local cache**: Messages, contacts, encryption state, and app data may be stored locally on your device in an encrypted local database.
+- **Optional iCloud backup**: If enabled in the app, your local database backup is encrypted using recovery-key-derived material and stored in your Apple iCloud account.
 
 ## 2. How We Use Your Information
 
-We use the information we collect to:
-- **Provide Authentication**: Verify your identity via SMS
-- **Deliver Messages**: Store and transmit your messages to recipients
-- **Send Notifications**: Alert you about new messages and contacts
-- **Maintain Service**: Ensure app functionality and performance
-- **Improve Experience**: Fix bugs and enhance features
-- **Provide Support**: Respond to your questions and issues
+We use your information to:
 
-## 3. Data Storage and Security
+- Create and authenticate your account.
+- Maintain your signed-in session.
+- Deliver encrypted 1:1 messages and reactions.
+- Maintain invite-only contacts and block state.
+- Exchange public keys required for end-to-end encryption.
+- Send push notifications if you allow them.
+- Enforce account security, rate limits, and abuse prevention.
+- Process account deletion and data export requests.
+- Maintain service reliability and required app version checks.
 
-### 3.1 Where Your Data is Stored
-- **Cloud Storage**: Messages, contacts, and profile data stored in Firebase Cloud Firestore (Google Cloud Platform, servers located in europe-west1)
-- **Media Storage**: Profile pictures stored in Firebase Storage
-- **Local Cache**: Encrypted local database on your device using iOS Data Protection
+We do not sell personal data. We do not use your data for advertising. We do not track your behavior across other apps or websites.
 
-### 3.2 Security Measures
-- **Encryption in Transit**: All network communication uses HTTPS/TLS encryption
-- **Encryption at Rest**: Local database protected by iOS Data Protection
-- **Access Control**: Firebase security rules enforce user authorization
-- **Secure Authentication**: Phone number verification via Firebase Authentication
+## 3. Legal Bases for Processing
 
-## 4. Data Sharing and Disclosure
+For users in the European Economic Area or United Kingdom, we rely on these legal bases:
 
-### 4.1 We DO NOT:
-- Sell your personal information to third parties
-- Share your messages with anyone except intended recipients
-- Use your data for advertising or marketing to third parties
-- Track your behaviour across other apps or websites
+- **Contract**: Account creation, authentication, contacts, invites, encrypted messaging, message sync, and E2EE key exchange are necessary to provide the app.
+- **Consent or user direction**: Push notifications and optional iCloud backup are controlled by you through iOS/app settings.
+- **Legitimate interests**: Security, abuse prevention, rate limits, service reliability, deletion audit records, and preserving the remaining participant's conversation history after account deletion.
+- **Legal obligation**: Responding to valid privacy rights requests and complying with applicable law.
 
-### 4.2 We DO Share With:
-- **Message Recipients**: People you choose to message
-- **Service Providers**: 
-  - Firebase/Google Cloud (backend infrastructure)
-  - Apple (push notification delivery via APNs)
-- **Legal Requirements**: If required by law, court order, or governmental request
+## 4. Where Your Data Is Stored
 
-## 5. Your Rights and Choices
+- **Convex**: Backend database, server functions, file/avatar storage, and real-time sync.
+- **Clerk**: Authentication, recovery-key credential processing, account sessions, and Clerk user IDs.
+- **Apple Push Notification service (APNs)**: Push notification delivery.
+- **Resend**: Email delivery for account deletion notifications to our administrator.
+- **Apple iCloud**: Optional user-controlled encrypted backup storage, if you enable iCloud backup.
+- **Your device**: Encrypted local cache and encryption state.
 
-You have the right to:
-- **Access Your Data**: View all data we have about you
-- **Update Information**: Change your profile name and picture
-- **Delete Messages**: Remove individual messages or entire conversations
-- **Delete Account**: Request account deletion directly from the app (Profile → Request Account Deletion). Your request will be processed within 7 days. You can cancel your deletion request anytime before processing. To verify deletion is complete, try signing in after 7 days - if your phone number is not registered, deletion was successful.
-- **Block Contacts**: Prevent specific users from contacting you
-- **Opt-Out of Notifications**: Disable push notifications in iOS Settings
+All network communication uses HTTPS/TLS. Local data is protected by iOS security features and the app's encrypted database design.
 
-## 6. Data Retention
+## 5. Service Providers and International Transfers
 
-- **Active Account**: Data retained while your account is active
-- **Messages**: Stored until you delete them
-- **Deleted Messages**: Permanently removed from our servers
-- **Account Deletion**: Upon request through the app, we will delete within 7 days:
-  - Your Firebase authentication credentials (you cannot sign in again)
-  - Your profile information (name changed to "Deleted User", phone number and avatar removed)
-  - Your contacts list and device tokens
-  - Your profile picture from storage
-  - Note: Your user account record will be retained in an anonymized state to preserve conversation history for your contacts. Your contacts will see you as "Deleted User" and will not be able to send you new messages. Past messages will remain visible to them. You can cancel your deletion request anytime before it is processed.
-  - A minimal deletion request record (user ID, request timestamp, and status only) is retained permanently for audit purposes. Phone numbers are removed from deletion logs immediately after processing.
-- **Local Cache**: Automatically deleted when you sign out
-- **Backup Data**: May be retained for up to 90 days for disaster recovery
+We use trusted service providers to operate InnerRing:
 
-## 7. Testing and Beta Versions
+- **Convex**: Backend infrastructure, database, functions, storage, and sync.
+- **Clerk**: Authentication and session management.
+- **Resend**: Admin deletion notification email delivery.
+- **Apple/APNs**: Push notification delivery.
+- **Apple iCloud**: Optional user-controlled encrypted backup storage.
 
-During beta testing (TestFlight) and development phases:
-- **Test Data**: We may periodically delete all test data, including accounts, messages, and contacts, to ensure a clean testing environment
-- **No Guarantee**: Data created during beta testing is not guaranteed to be retained
-- **Production Release**: Once the app is publicly released on the App Store, your data will be protected according to the retention policies outlined in this Privacy Policy
+These providers may process data in countries outside your country of residence. Where required, we rely on Data Processing Agreements, Standard Contractual Clauses, or equivalent safeguards provided by these services.
 
-If you are a beta tester, please do not use the app for important or sensitive communications during the testing phase.
+## 6. Data Sharing and Disclosure
 
-## 8. Children's Privacy
+We share data only as needed to provide the service:
 
-DirectChat is not intended for users under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
+- **Message recipients**: People you choose to contact can receive your encrypted messages and see your profile information needed for the conversation.
+- **Service providers**: Convex, Clerk, Resend, Apple/APNs, and Apple iCloud as described above.
+- **Legal requirements**: If required by law, court order, or valid governmental request.
 
-## 9. International Data Transfers
+We do not share plaintext message content because message contents are end-to-end encrypted and unavailable to us on the backend.
 
-Your information may be transferred to and maintained on servers located outside of your country. By using DirectChat, you consent to the transfer of information to countries that may have different data protection laws than your country of residence.
+## 7. Your Rights and Choices
 
-## 10. Third-Party Services
+Depending on where you live, you may have rights to access, export, correct, delete, restrict, or object to processing of your personal data.
 
-We use the following third-party services:
-- **Firebase (Google)**: Authentication, database (Cloud Firestore), storage (Cloud Storage), and cloud functions
-- **Apple Push Notification Service (APNs)**: Push notification delivery
+Because InnerRing does not collect email addresses or phone numbers, identity-sensitive requests must be made from within the app while signed in. We cannot safely verify account ownership through email support alone.
 
-These services have their own privacy policies:
-- Firebase: https://firebase.google.com/support/privacy
-- Apple: https://www.apple.com/legal/privacy/
+### 7.1 Access and Export
 
-We do NOT use analytics, crash reporting, or advertising services.
+InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, contact metadata, invite metadata, encrypted message records, message metadata, reaction metadata, device/session metadata, and deletion request status.
 
-## 11. Changes to This Privacy Policy
+Server-side exports may include encrypted message records and metadata, but not plaintext message contents. Plaintext message history may exist only on your device and in your encrypted iCloud backup if enabled.
 
-We may update this Privacy Policy from time to time. We will notify you of any changes by:
-- Posting the new Privacy Policy in the app
-- Updating the "Last Updated" date
-- Sending a notification for material changes
+### 7.2 Correction
 
-Your continued use of DirectChat after changes constitutes acceptance of the updated policy.
+You can update your display name and avatar in the app.
 
-## 12. California Privacy Rights
+### 7.3 Notifications
 
-If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):
-- Right to know what personal information is collected
-- Right to know if personal information is sold or disclosed
-- Right to opt-out of the sale of personal information (we do not sell data)
-- Right to request deletion of personal information
-- Right to non-discrimination for exercising your rights
+You can allow or disable push notifications in iOS Settings.
 
-## 13. European Privacy Rights
+### 7.4 Account Deletion
 
-If you are in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR):
-- Right to access your personal data
-- Right to rectification of inaccurate data
-- Right to erasure ("right to be forgotten")
-- Right to restrict processing
-- Right to data portability
-- Right to object to processing
-- Right to withdraw consent
+You can request account deletion in the app while signed in. Deletion requests are processed within 7 days. You may cancel your deletion request in the app before it is processed.
 
-Legal basis for processing:
-- **Contract**: Necessary to provide messaging services
-- **Consent**: For optional features like push notifications
-- **Legitimate Interest**: For app improvement and security
+For security, deletion requests are not accepted by unauthenticated email. If you lose your recovery key and are signed out, we may be unable to verify ownership, recover, export, or delete the account.
+
+## 8. Data Retention
+
+### 8.1 Active Accounts
+
+We retain account, contact, encrypted message, message metadata, device, session, and E2EE public-key data while your account is active and the data is needed to provide the service.
+
+### 8.2 Messages and Reactions
+
+Encrypted messages and related metadata are retained while either conversation participant keeps the conversation. If a message is deleted, message ciphertext is cleared or removed, but minimal deletion metadata may remain to sync deletion state and preserve conversation integrity.
+
+Message events and reaction tombstones may be retained as needed for message sync, read/edit/delete state, and Double Ratchet encryption correctness.
+
+### 8.3 Account Deletion
+
+When your account deletion is processed, we delete or remove access to:
+
+- Your Clerk authentication account.
+- Active sessions.
+- Push notification tokens and device records.
+- Avatar storage.
+- Invite codes created by you.
+- E2EE signed prekeys and one-time prekeys.
+- Public identity keys stored on your Convex user record.
+
+We anonymize your profile as "Deleted User" and prevent future account access.
+
+Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data to preserve the other participant's conversation history and the integrity of the messaging service. This retained data is pseudonymous personal data, not fully anonymous data.
+
+### 8.4 Deletion Request Records
+
+We retain limited deletion request records, such as user ID, request time, status, and completion time, for up to 24 months for audit, security, and legal defense purposes.
+
+### 8.5 Backups
+
+Backend providers may retain deleted data temporarily in disaster-recovery backups according to their own retention practices. These backups are not used to restore deleted accounts as active accounts.
+
+Optional iCloud backups are controlled by you through your Apple iCloud account. We cannot access or delete your iCloud backup for you.
+
+## 9. Beta and TestFlight
+
+During beta testing and TestFlight use, we may reset or delete test data to maintain the service. Do not use beta builds for critical or sensitive communications that you cannot afford to lose.
+
+## 10. Children's Privacy
+
+InnerRing is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you believe a child has provided personal data, contact us.
+
+## 11. California Privacy Rights
+
+California residents may have rights under the California Consumer Privacy Act, including the right to know, delete, correct, and opt out of sale or sharing. We do not sell personal information.
+
+## 12. European Privacy Rights
+
+If you are in the EEA or UK, you may have GDPR or UK GDPR rights including access, rectification, erasure, restriction, portability, objection, and withdrawal of consent where processing is based on consent.
+
+Identity-sensitive rights requests must be initiated from within the app while signed in because we do not collect phone numbers or email addresses for account verification.
+
+## 13. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. We will update the "Last Updated" date when changes are made. Material changes may also be communicated in the app.
 
 ## 14. Contact Us
 
-If you have questions, concerns, or requests about this Privacy Policy or your data, please contact us:
+If you have questions about this Privacy Policy, contact us at:
 
 **Email**: innerring.app@gmail.com
-**Response Time**: We aim to respond within 72 hours
 
-**To Request Account Deletion**: Use the in-app deletion feature (Profile → Request Account Deletion). You must be signed in to request deletion for security reasons - this ensures only the account owner can delete the account. Your request will be processed within 7 days. You can cancel anytime before processing.
-
-What gets deleted:
-- Your authentication credentials (you will be signed out and unable to sign in again)
-- Your profile information (name changed to "Deleted User", phone number and avatar removed)
-- Your profile picture from storage
-- Your contacts list and device tokens
-- Your account marked as deleted in all contacts where you appear
-
-What is retained:
-- An anonymized user record to preserve conversation history for your contacts
-- Your contacts will see you as "Deleted User" and can view past conversations but cannot send new messages to you
-- A minimal deletion request record (user ID, timestamp, status) permanently for audit purposes (phone number removed after processing)
-
-**Note:** Email-based deletion requests are not accepted for security reasons. All deletions must be initiated from within the app while signed in.
-
----
-
-**Your Consent**
-
-By using DirectChat, you consent to this Privacy Policy and agree to its terms.
+For account deletion and data export, use the in-app controls while signed in. Email is for general privacy questions only and is not sufficient to verify account ownership.
