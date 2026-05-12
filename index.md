@@ -70,15 +70,15 @@ All network communication uses HTTPS/TLS. Local data is protected by iOS securit
 
 ## 5. Service Providers and International Transfers
 
-We use trusted service providers to operate InnerRing:
+We use trusted service providers to operate InnerRing. They process data only as needed to provide the app and related infrastructure.
 
-- **Convex**: Backend infrastructure, database, functions, storage, and sync.
-- **Clerk**: Authentication and session management.
-- **Resend**: Admin deletion notification email delivery.
-- **Apple/APNs**: Push notification delivery.
-- **Apple iCloud**: Optional user-controlled encrypted backup storage.
+- **Convex**: Processes account IDs, display names, avatar references, invite metadata, contacts, encrypted messages, message metadata, hashed device IDs, push tokens, public E2EE keys, deletion request records, and backend storage data. Purpose: backend database, server functions, avatar/file storage, real-time sync, and service reliability. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Clerk**: Processes authentication credentials, Clerk user IDs, session IDs, and authentication metadata. Purpose: account authentication and session management. Reference: [Clerk Privacy Policy](https://clerk.com/legal/privacy), [Clerk Data Processing Addendum](https://clerk.com/legal/dpa), and [Clerk Subprocessors](https://clerk.com/legal/subprocessors).
+- **Resend**: Processes account deletion notification email content sent to our administrator, currently limited to user ID and request timestamp. Purpose: operational notification so deletion requests can be processed. Reference: [Resend Privacy Policy](https://resend.com/legal/privacy-policy), [Resend Data Processing Addendum](https://resend.com/legal/dpa), and [Resend Subprocessors](https://resend.com/legal/subprocessors).
+- **Apple/APNs**: Processes push tokens and notification delivery data. Purpose: push notification delivery when you allow notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
+- **Apple iCloud**: Processes optional encrypted backup files if you enable iCloud backup. Purpose: user-controlled backup and restore. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/) and [iCloud Terms of Service](https://www.apple.com/legal/internet-services/icloud/).
 
-These providers may process data in countries outside your country of residence. Where required, we rely on Data Processing Agreements, Standard Contractual Clauses, or equivalent safeguards provided by these services.
+These providers may process data in countries outside your country of residence. Where required, we rely on Data Processing Agreements, Standard Contractual Clauses, the EU-U.S. Data Privacy Framework, or equivalent safeguards provided by these services. Provider backup and retention behavior is governed by their service terms and data processing terms.
 
 ## 6. Data Sharing and Disclosure
 
