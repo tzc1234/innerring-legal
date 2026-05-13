@@ -146,7 +146,7 @@ When your account deletion is processed, we delete or remove access to:
 
 - Your Clerk authentication account.
 - Active sessions.
-- Push notification tokens and device records.
+- Push notification tokens and device records, including hashed device IDs.
 - Avatar storage.
 - Invite codes created by you.
 - E2EE signed prekeys and one-time prekeys.
@@ -154,7 +154,11 @@ When your account deletion is processed, we delete or remove access to:
 
 We anonymize your profile as "Deleted User" and prevent future account access.
 
-Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data to preserve the other participant's conversation history and the integrity of the messaging service. This retained data is pseudonymous personal data, not fully anonymous data.
+Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data under our legitimate interests to preserve the other participant's conversation history and the integrity of the messaging service.
+
+We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, avatar, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "Deleted User," your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
+
+The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
 ### 8.4 Deletion Request Records
 
