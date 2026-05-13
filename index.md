@@ -53,9 +53,21 @@ We do not sell personal data. We do not use your data for advertising. We do not
 For users in the European Economic Area or United Kingdom, we rely on these legal bases:
 
 - **Contract**: Account creation, authentication, contacts, invites, encrypted messaging, message sync, and E2EE key exchange are necessary to provide the app.
-- **Consent or user direction**: Push notifications and optional iCloud backup are controlled by you through iOS/app settings.
+- **Consent or user choice**: Push notifications and optional iCloud backup are controlled by you through iOS/app settings.
 - **Legitimate interests**: Security, abuse prevention, rate limits, service reliability, deletion audit records, and preserving the remaining participant's conversation history after account deletion.
 - **Legal obligation**: Responding to valid privacy rights requests and complying with applicable law.
+
+In more detail:
+
+- Account creation uses contract because an account is required to provide the service.
+- Authentication and session management use contract because they are required for secure account access.
+- Messaging, contacts, invites, message sync, and E2EE key exchange use contract because they are the core app service.
+- Push notifications use consent or user choice because delivery depends on iOS notification permission.
+- Optional iCloud backup uses consent or user choice because you choose whether to enable it and control the backup through your Apple account.
+- Abuse prevention, security, rate limits, service reliability, and app version enforcement use legitimate interests.
+- Deletion request records use legal obligation and legitimate interests so we can process deletion requests and keep limited proof of handling.
+- Admin deletion notification emails use legitimate interests while deletion finalization is manually processed.
+- Support emails use consent or legitimate interests because you choose to contact us and we need to respond.
 
 ## 4. Where Your Data Is Stored
 
