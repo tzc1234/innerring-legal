@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: May 19, 2026**
+**Last Updated: May 21, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -121,7 +121,7 @@ Because InnerRing does not use email addresses or phone numbers for account iden
 
 ### 7.1 Access and Export
 
-InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, contact and conversation metadata, invite metadata, message metadata, reaction metadata, device/session metadata, E2EE public-key metadata, and deletion request status.
+InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, device/session metadata, subscription identifiers and entitlement status, contact and conversation metadata, invite metadata, message metadata, reaction metadata, E2EE public-key metadata, and deletion request status.
 
 Server-side exports do not include plaintext message contents because we cannot decrypt them. Standard server-side exports also exclude raw ciphertext, encryption headers, X3DH headers, and encryption session IDs because these are technical cryptographic records rather than intelligible message content. Plaintext message history may exist only on your device and in your encrypted iCloud backup if enabled.
 

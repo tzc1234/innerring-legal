@@ -1,6 +1,6 @@
 # Terms of Service for InnerRing
 
-**Last Updated: May 19, 2026**
+**Last Updated: May 21, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first, invite-only, 1:1 messaging app for close friends and family. By using InnerRing, you agree to these Terms.
 
@@ -14,7 +14,7 @@ InnerRing is not intended for children under 13.
 
 InnerRing is designed around privacy and end-to-end encrypted messaging. Message contents are encrypted before they leave your device, and we cannot read plaintext message contents from our backend.
 
-Some metadata is still processed to operate the service, such as account IDs, contacts, invite metadata, encrypted message records, timestamps, device/session information, push tokens, and public encryption keys. Our Privacy Policy explains this in more detail.
+Some metadata is still processed to operate the service, such as account IDs, contacts, invite metadata, encrypted message records, timestamps, device/session information, subscription entitlement information, push tokens, and public encryption keys. Our Privacy Policy explains this in more detail.
 
 ## 3. Account Access and Recovery Key
 
