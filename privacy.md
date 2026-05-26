@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: May 21, 2026**
+**Last Updated: May 26, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -160,7 +160,6 @@ When your account deletion is processed, we delete or remove access to:
 - Push notification tokens and device records, including hashed device IDs.
 - Avatar storage.
 - Invite codes created by you.
-- Subscription entitlement records linked to your account.
 - E2EE signed prekeys and one-time prekeys.
 - Public identity keys stored on your Convex user record.
 
@@ -172,11 +171,15 @@ We limit the privacy impact of this retention by deleting your authentication ac
 
 The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
-### 8.4 Deletion Request Records
+### 8.4 Subscription Entitlement Records
+
+We retain Apple-verified subscription entitlement records after account deletion as needed to verify purchases and refunds, handle billing disputes, prevent fraud, and maintain accounting and audit records. These records may include your deleted-user account ID, product ID, App Store transaction identifiers, subscription environment, entitlement status, expiry or revocation dates, and verification timestamps.
+
+### 8.5 Deletion Request Records
 
 We retain limited deletion request records, such as user ID, request time, status, and completion time, for up to 24 months for audit, security, and legal defense purposes.
 
-### 8.5 Backups
+### 8.6 Backups
 
 Backend providers may retain deleted data temporarily in disaster-recovery backups according to their own retention practices. These backups are not used to restore deleted accounts as active accounts.
 
