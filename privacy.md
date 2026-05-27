@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: May 26, 2026**
+**Last Updated: May 27, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -13,7 +13,7 @@ InnerRing does not use phone numbers, email addresses for account identity, publ
 - **Account ID**: A Convex user ID used to operate your account.
 - **Authentication ID**: A Clerk user ID and session ID used for sign-in and session management.
 - **Recovery key credential**: Your recovery key is used as your Clerk authentication credential. We do not store your recovery key in Convex.
-- **Profile information**: Your display name and optional avatar.
+- **Profile information**: Your display name and selected app-owned avatar background color value. The app derives an initial icon locally from your display name; it does not upload profile photos.
 - **Account status**: Active, deletion pending, or deleted.
 
 ### 1.2 Messaging and Contact Data
@@ -79,7 +79,7 @@ In more detail:
 
 ## 4. Where Your Data Is Stored
 
-- **Convex**: Backend database, server functions, file/avatar storage, and real-time sync.
+- **Convex**: Backend database, server functions, and real-time sync.
 - **Clerk**: Authentication, recovery-key credential processing, account sessions, and Clerk user IDs.
 - **Apple Push Notification service (APNs)**: Push notification delivery.
 - **Apple App Store**: Subscription purchases, subscription entitlement verification, renewal/cancellation/refund status, and App Store Server Notifications.
@@ -93,7 +93,7 @@ All network communication uses HTTPS/TLS. Local data is protected by iOS securit
 
 We use trusted service providers to operate InnerRing. They process data only as needed to provide the app and related infrastructure.
 
-- **Convex**: Processes account IDs, display names, avatar references, invite metadata, contacts, encrypted messages, message metadata, hashed device IDs, push tokens, public E2EE keys, deletion request records, and backend storage data. Purpose: backend database, server functions, avatar/file storage, real-time sync, and service reliability. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Convex**: Processes account IDs, display names, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, and service reliability. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
 - **Clerk**: Processes authentication credentials, Clerk user IDs, session IDs, and authentication metadata. Purpose: account authentication and session management. Reference: [Clerk Privacy Policy](https://clerk.com/legal/privacy), [Clerk Data Processing Addendum](https://clerk.com/legal/dpa), and [Clerk Subprocessors](https://clerk.com/legal/subprocessors).
 - **Resend**: Processes account deletion notification email content sent to our administrator, currently limited to user ID and request timestamp. Purpose: operational notification so deletion requests can be processed. Reference: [Resend Privacy Policy](https://resend.com/legal/privacy-policy), [Resend Data Processing Addendum](https://resend.com/legal/dpa), and [Resend Subprocessors](https://resend.com/legal/subprocessors).
 - **Apple/APNs**: Processes push tokens and notification delivery data. Purpose: push notification delivery when you allow notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -127,7 +127,7 @@ Server-side exports do not include plaintext message contents because we cannot 
 
 ### 7.2 Correction
 
-You can update your display name and avatar in the app.
+You can update your display name and select a different app-owned avatar background color in the app.
 
 ### 7.3 Notifications
 
@@ -158,7 +158,6 @@ When your account deletion is processed, we delete or remove access to:
 - Your Clerk authentication account.
 - Active sessions.
 - Push notification tokens and device records, including hashed device IDs.
-- Avatar storage.
 - Invite codes created by you.
 - E2EE signed prekeys and one-time prekeys.
 - Public identity keys stored on your Convex user record.
@@ -167,7 +166,7 @@ We anonymize your profile as "Deleted User" and prevent future account access.
 
 Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data under our legitimate interests to preserve the other participant's conversation history and the integrity of the messaging service.
 
-We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, avatar, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "Deleted User," your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
+We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "Deleted User" with the default app-owned avatar color, your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
 
 The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
