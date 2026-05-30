@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: May 27, 2026**
+**Last Updated: May 30, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -14,6 +14,7 @@ InnerRing does not use phone numbers, email addresses for account identity, publ
 - **Authentication ID**: A Clerk user ID and session ID used for sign-in and session management.
 - **Recovery key credential**: Your recovery key is used as your Clerk authentication credential. We do not store your recovery key in Convex.
 - **Profile information**: Your display name and selected app-owned avatar background color value. The app derives an initial icon locally from your display name; it does not upload profile photos.
+- **Display-name audit records**: Previous and new display names, change reason, actor type, and related safety report ID where applicable, used for compliance, safety review, and account-deletion records.
 - **Account status**: Active, deletion pending, or deleted.
 
 ### 1.2 Messaging and Contact Data
@@ -50,6 +51,7 @@ We use your information to:
 - Exchange public keys required for end-to-end encryption.
 - Send push notifications if you allow them.
 - Enforce account security, rate limits, and abuse prevention.
+- Keep display-name audit records for compliance, safety review, and account-deletion records.
 - Process account deletion and data export requests.
 - Verify subscription entitlements and gate contacts, invites, and messaging.
 - Maintain service reliability and required app version checks.
@@ -62,7 +64,7 @@ For users in the European Economic Area or United Kingdom, we rely on these lega
 
 - **Contract**: Account creation, authentication, contacts, invites, encrypted messaging, message sync, and E2EE key exchange are necessary to provide the app.
 - **Consent or user choice**: Push notifications and optional iCloud backup are controlled by you through iOS/app settings.
-- **Legitimate interests**: Security, abuse prevention, rate limits, service reliability, deletion audit records, and preserving the remaining participant's conversation history after account deletion.
+- **Legitimate interests**: Security, abuse prevention, rate limits, service reliability, deletion and display-name audit records, and preserving the remaining participant's conversation history after account deletion.
 - **Legal obligation**: Responding to valid privacy rights requests and complying with applicable law.
 
 In more detail:
@@ -72,7 +74,7 @@ In more detail:
 - Messaging, contacts, invites, message sync, and E2EE key exchange use contract because they are the core app service.
 - Push notifications use consent or user choice because delivery depends on iOS notification permission.
 - Optional iCloud backup uses consent or user choice because you choose whether to enable it and control the backup through your Apple account.
-- Abuse prevention, security, rate limits, service reliability, and app version enforcement use legitimate interests.
+- Abuse prevention, security, rate limits, service reliability, display-name audit records, and app version enforcement use legitimate interests.
 - Deletion request records use legal obligation and legitimate interests so we can process deletion requests and keep limited proof of handling.
 - Admin deletion notification emails use legitimate interests while deletion finalization is manually processed.
 - Support emails use consent or legitimate interests because you choose to contact us and we need to respond.
@@ -93,7 +95,7 @@ All network communication uses HTTPS/TLS. Local data is protected by iOS securit
 
 We use trusted service providers to operate InnerRing. They process data only as needed to provide the app and related infrastructure.
 
-- **Convex**: Processes account IDs, display names, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, and service reliability. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Convex**: Processes account IDs, display names, display-name audit records, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, and service reliability. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
 - **Clerk**: Processes authentication credentials, Clerk user IDs, session IDs, and authentication metadata. Purpose: account authentication and session management. Reference: [Clerk Privacy Policy](https://clerk.com/legal/privacy), [Clerk Data Processing Addendum](https://clerk.com/legal/dpa), and [Clerk Subprocessors](https://clerk.com/legal/subprocessors).
 - **Resend**: Processes account deletion notification email content sent to our administrator, currently limited to user ID and request timestamp. Purpose: operational notification so deletion requests can be processed. Reference: [Resend Privacy Policy](https://resend.com/legal/privacy-policy), [Resend Data Processing Addendum](https://resend.com/legal/dpa), and [Resend Subprocessors](https://resend.com/legal/subprocessors).
 - **Apple/APNs**: Processes push tokens and notification delivery data. Purpose: push notification delivery when you allow notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -162,11 +164,11 @@ When your account deletion is processed, we delete or remove access to:
 - E2EE signed prekeys and one-time prekeys.
 - Public identity keys stored on your Convex user record.
 
-We anonymize your profile as "Deleted User" and prevent future account access.
+We anonymize your profile as "DELETED USER" and prevent future account access.
 
 Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data under our legitimate interests to preserve the other participant's conversation history and the integrity of the messaging service.
 
-We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "Deleted User" with the default app-owned avatar color, your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
+We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "DELETED USER" with the default app-owned avatar color, your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
 
 The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
@@ -178,7 +180,11 @@ We retain Apple-verified subscription entitlement records after account deletion
 
 We retain limited deletion request records, such as user ID, request time, status, and completion time, for up to 24 months for audit, security, and legal defense purposes.
 
-### 8.6 Backups
+### 8.6 Display-Name Audit Records
+
+We retain display-name audit records for 1 year by default. If a display-name audit record is linked to a safety report with a longer retention period, we retain it for the same period as that safety report.
+
+### 8.7 Backups
 
 Backend providers may retain deleted data temporarily in disaster-recovery backups according to their own retention practices. These backups are not used to restore deleted accounts as active accounts.
 
