@@ -95,4 +95,4 @@ We may update these Terms from time to time. We will update the "Last Updated" d
 
 If you have questions about these Terms, contact us at:
 
-**Email**: innerring.app@gmail.com
+**Email**: [innerring.app@gmail.com](mailto:innerring.app@gmail.com)

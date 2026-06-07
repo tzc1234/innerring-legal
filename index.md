@@ -7,4 +7,4 @@ Legal documents for InnerRing, a privacy-first 1:1 messaging app for close frien
 
 ## Contact
 
-**Email**: innerring.app@gmail.com
+**Email**: [innerring.app@gmail.com](mailto:innerring.app@gmail.com)

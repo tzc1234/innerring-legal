@@ -216,6 +216,6 @@ We may update this Privacy Policy from time to time. We will update the "Last Up
 
 If you have questions about this Privacy Policy, contact us at:
 
-**Email**: innerring.app@gmail.com
+**Email**: [innerring.app@gmail.com](mailto:innerring.app@gmail.com)
 
 For account deletion and data export, use the in-app controls while signed in. Email is for general privacy questions only and is not sufficient to verify account ownership.
