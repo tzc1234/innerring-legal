@@ -49,6 +49,19 @@ InnerRing is not an emergency service. If you or someone else is in immediate da
 
 If you believe a child is at immediate risk, contact appropriate emergency or child-protection services in your location. You may also use the in-app reporting tools so InnerRing can preserve and review the available report information.
 
+## External Reporting
+
+InnerRing reviews in-app safety reports, but it is not a police, fraud, or emergency service.
+
+For users in the United Kingdom:
+
+- If there is immediate danger, call emergency services on 999.
+- For non-emergency police matters, use 101 or the relevant local police route.
+- For fraud or cybercrime, consider reporting to Action Fraud and contacting your bank or payment provider if money was involved.
+- For child-protection concerns, contact emergency services, police, or appropriate child-protection services.
+
+You may still use InnerRing's in-app reporting tools so we can review and preserve the available report information.
+
 ## What InnerRing Does Not Do
 
 InnerRing does not:
