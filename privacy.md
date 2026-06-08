@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: June 7, 2026**
+**Last Updated: June 8, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -23,7 +23,7 @@ InnerRing does not use phone numbers, email addresses for account identity, publ
 - **Invite codes**: Hashed invite codes, creation time, expiry time, and redemption metadata.
 - **Encrypted messages**: Message ciphertext, encryption headers, sender/recipient relationship metadata, timestamps, edit/delete/read metadata, and reaction metadata.
 - **Message audit records**: Ciphertext and encryption metadata for message send, edit, and delete events, used for message sync, safety review, and record keeping.
-- **Safety report records**: Report category, report metadata, optional additional information, UK-link declaration where relevant, reviewed disposition fields, and references to the reported message or display-name audit record.
+- **Safety report records**: Report category, report metadata, optional additional information, UK/US link declaration where relevant, reviewed disposition fields, and references to the reported message or display-name audit record.
 - **End-to-end encryption public keys**: Public identity keys, signed prekeys, and one-time prekeys used to establish encrypted sessions.
 
 Message contents are end-to-end encrypted. We cannot read plaintext message contents from our backend.
@@ -213,6 +213,8 @@ InnerRing is not intended for children under 13. We do not knowingly collect per
 ## 11. California Privacy Rights
 
 California residents may have rights under the California Consumer Privacy Act, including the right to know, delete, correct, and opt out of sale or sharing. We do not sell personal information.
+
+We do not share personal information for cross-context behavioral advertising, and we do not use advertising, analytics, or cross-app tracking.
 
 ## 12. European Privacy Rights
 

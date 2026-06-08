@@ -1,6 +1,6 @@
 # Safety at InnerRing
 
-**Last Updated: June 7, 2026**
+**Last Updated: June 8, 2026**
 
 InnerRing is a privacy-first, invite-only, 1:1 messaging app for close friends and family. This page explains the safety tools available in the app and how safety reports are handled.
 
@@ -19,7 +19,7 @@ You can report:
 
 When you report a message, InnerRing receives the selected reported message and report metadata for safety review. When you report a display name, InnerRing receives the selected profile name and report metadata for safety review.
 
-For child sexual exploitation, grooming, or urgent child-safeguarding categories, the app may ask whether anyone involved is in the United Kingdom or whether that is unknown. We do not collect global location data to prove UK links.
+For child sexual exploitation, grooming, or urgent child-safeguarding categories, the app may ask whether anyone involved is in the United Kingdom, the United States, or whether that is unknown. We do not collect global location data to prove location links.
 
 ## Blocking
 
@@ -59,6 +59,13 @@ For users in the United Kingdom:
 - For non-emergency police matters, use 101 or the relevant local police route.
 - For fraud or cybercrime, consider reporting to Action Fraud and contacting your bank or payment provider if money was involved.
 - For child-protection concerns, contact emergency services, police, or appropriate child-protection services.
+
+For users in the United States:
+
+- If there is immediate danger, call emergency services on 911.
+- For suspected child exploitation, consider reporting to the NCMEC CyberTipline.
+- For cyber-enabled fraud or scams, consider reporting to FBI IC3 or FTC ReportFraud and contacting your bank or payment provider if money was involved.
+- For self-harm or emotional crisis support, call or text 988.
 
 You may still use InnerRing's in-app reporting tools so we can review and preserve the available report information.
 
