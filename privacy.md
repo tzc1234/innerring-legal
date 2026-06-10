@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: June 8, 2026**
+**Last Updated: June 10, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -23,6 +23,7 @@ InnerRing does not use phone numbers, email addresses for account identity, publ
 - **Invite codes**: Hashed invite codes, creation time, expiry time, and redemption metadata.
 - **Encrypted messages**: Message ciphertext, encryption headers, sender/recipient relationship metadata, timestamps, edit/delete/read metadata, and reaction metadata.
 - **Message audit records**: Ciphertext and encryption metadata for message send, edit, and delete events, used for message sync, safety review, and record keeping.
+- **Full-message sync logs**: Records that a signed-in user requested a full message fetch for a contact, including the contact ID, fetch branch, and request time. These logs are used for rate limits, abuse prevention, service reliability, and diagnosing unusually large message syncs.
 - **Safety report records**: Report category, report metadata, optional additional information, UK/US link declaration where relevant, reviewed disposition fields, and references to the reported message or display-name audit record.
 - **End-to-end encryption public keys**: Public identity keys, signed prekeys, and one-time prekeys used to establish encrypted sessions.
 
@@ -53,6 +54,7 @@ We use your information to:
 - Exchange public keys required for end-to-end encryption.
 - Send push notifications if you allow them.
 - Enforce account security, rate limits, and abuse prevention.
+- Log full-message sync requests to enforce rate limits, prevent abuse, and maintain service reliability.
 - Keep display-name audit records for compliance, safety review, and account-deletion records.
 - Receive, review, and retain safety reports and related audit records.
 - Reset verified abusive display names and apply account restrictions where justified or required.
@@ -100,7 +102,7 @@ All network communication uses HTTPS/TLS. Local data is protected by iOS securit
 
 We use trusted service providers to operate InnerRing. They process data only as needed to provide the app and related infrastructure.
 
-- **Convex**: Processes account IDs, display names, display-name audit records, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, message audit records, safety report records, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, service reliability, safety review, and abuse prevention. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Convex**: Processes account IDs, display names, display-name audit records, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, message audit records, full-message sync logs, safety report records, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, service reliability, safety review, rate limits, and abuse prevention. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
 - **Clerk**: Processes authentication credentials, Clerk user IDs, session IDs, and authentication metadata. Purpose: account authentication and session management. Reference: [Clerk Privacy Policy](https://clerk.com/legal/privacy), [Clerk Data Processing Addendum](https://clerk.com/legal/dpa), and [Clerk Subprocessors](https://clerk.com/legal/subprocessors).
 - **Resend**: Processes account deletion notification email content sent to our administrator, currently limited to user ID and request timestamp. Purpose: operational notification so deletion requests can be processed. Reference: [Resend Privacy Policy](https://resend.com/legal/privacy-policy), [Resend Data Processing Addendum](https://resend.com/legal/dpa), and [Resend Subprocessors](https://resend.com/legal/subprocessors).
 - **Apple/APNs**: Processes push tokens and notification delivery data. Purpose: push notification delivery when you allow notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -129,7 +131,7 @@ Because InnerRing does not use email addresses or phone numbers for account iden
 
 ### 7.1 Access and Export
 
-InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, device/session metadata, subscription identifiers and entitlement status, contact and conversation metadata, invite metadata, message metadata, reaction metadata, E2EE public-key metadata, and deletion request status.
+InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, device/session metadata, subscription identifiers and entitlement status, contact and conversation metadata, invite metadata, message metadata, reaction metadata, full-message sync logs, E2EE public-key metadata, and deletion request status.
 
 Server-side exports do not include plaintext message contents because we cannot decrypt ordinary messages. Standard server-side exports also exclude raw ciphertext, encryption headers, X3DH headers, encryption session IDs, and sealed safety-report context because these are technical cryptographic records or internal safety/legal records rather than ordinary account export data. Plaintext message history may exist only on your device and in your encrypted iCloud backup if enabled. If you voluntarily submit a message report, the reported content is handled as sealed safety-report context and is not included in ordinary export files.
 
@@ -157,7 +159,7 @@ We retain account, contact, encrypted message, message metadata, device, session
 
 Encrypted messages and related metadata are retained while either conversation participant keeps the conversation. If a message is deleted for everyone, the message may be hidden from the chat view while backend message rows, metadata, ciphertext, and audit records are retained as needed for delivery, sync, security, safety review, legal compliance, and record keeping.
 
-Message events and reaction tombstones may be retained as needed for message sync, read/edit/delete state, and Double Ratchet encryption correctness.
+Message events, reaction tombstones, and full-message sync logs may be retained as needed for message sync, read/edit/delete state, Double Ratchet encryption correctness, rate limits, abuse prevention, service reliability, and record keeping.
 
 ### 8.3 Account Deletion
 
@@ -178,7 +180,7 @@ We limit the privacy impact of this retention by deleting your authentication ac
 
 The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
-Safety reports, authority-escalated records, display-name audit records, message audit records, and related retention-held records may be retained after account deletion where needed for safety review, legal compliance, abuse prevention, mandatory reporting, or record keeping.
+Safety reports, authority-escalated records, display-name audit records, message audit records, full-message sync logs, and related retention-held records may be retained after account deletion where needed for safety review, legal compliance, abuse prevention, service reliability, mandatory reporting, or record keeping.
 
 ### 8.4 Subscription Entitlement Records
 
