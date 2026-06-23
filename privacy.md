@@ -1,6 +1,6 @@
 # Privacy Policy for InnerRing
 
-**Last Updated: June 10, 2026**
+**Last Updated: June 23, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first 1:1 messaging app for close friends and family. This Privacy Policy explains what data we process, why we process it, how long we keep it, and what choices you have.
 
@@ -32,6 +32,7 @@ Message contents are end-to-end encrypted. We cannot read plaintext message cont
 ### 1.3 Device, Notification, and Local Data
 
 - **Hashed device ID**: Used for session safety, account creation rate limits, and single-device session behavior. We do not send the raw iOS device identifier to our backend.
+- **App integrity records**: Apple App Attest key and assertion data, including the hashed device ID, attestation public key and public-key hash, Apple attestation receipt, environment, challenges, assertion counters, and consumed token identifiers. These records are used to confirm that account and session requests come from a valid copy of InnerRing on Apple hardware and to prevent replay and automated abuse.
 - **APNs push token**: Used to deliver push notifications if you allow notifications.
 - **Local cache**: Messages, contacts, encryption state, and app data may be stored locally on your device in an encrypted local database.
 - **Optional iCloud backup**: If enabled in the app, your local database backup is encrypted using recovery-key-derived material and stored in your Apple iCloud account.
@@ -54,6 +55,7 @@ We use your information to:
 - Exchange public keys required for end-to-end encryption.
 - Send push notifications if you allow them.
 - Enforce account security, rate limits, and abuse prevention.
+- Verify app and device integrity for account creation and session activation.
 - Log full-message sync requests to enforce rate limits, prevent abuse, and maintain service reliability.
 - Keep display-name audit records for compliance, safety review, and account-deletion records.
 - Receive, review, and retain safety reports and related audit records.
@@ -81,6 +83,7 @@ In more detail:
 - Push notifications use consent or user choice because delivery depends on iOS notification permission.
 - Optional iCloud backup uses consent or user choice because you choose whether to enable it and control the backup through your Apple account.
 - Abuse prevention, security, rate limits, service reliability, safety reporting, display-name audit records, account restrictions, and app version enforcement use legitimate interests.
+- App Attest verification and related security records use legitimate interests to prevent unauthorized clients, replay attacks, and automated abuse.
 - Authority escalation, mandatory reporting, and legally required retention use legal obligation where applicable.
 - Deletion request records use legal obligation and legitimate interests so we can process deletion requests and keep limited proof of handling.
 - Admin deletion notification emails use legitimate interests while deletion finalization is manually processed.
@@ -89,7 +92,9 @@ In more detail:
 ## 4. Where Your Data Is Stored
 
 - **Convex**: Backend database, server functions, and real-time sync.
+- **Cloudflare**: App Attest verification and secure routing between the app and Convex.
 - **Clerk**: Authentication, recovery-key credential processing, account sessions, and Clerk user IDs.
+- **Apple App Attest**: Apple device and app-integrity attestation.
 - **Apple Push Notification service (APNs)**: Push notification delivery.
 - **Apple App Store**: Subscription purchases, subscription entitlement verification, renewal/cancellation/refund status, and App Store Server Notifications.
 - **Resend**: Email delivery for account deletion notifications to our administrator.
@@ -102,10 +107,12 @@ All network communication uses HTTPS/TLS. Local data is protected by iOS securit
 
 We use trusted service providers to operate InnerRing. They process data only as needed to provide the app and related infrastructure.
 
-- **Convex**: Processes account IDs, display names, display-name audit records, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, message audit records, full-message sync logs, safety report records, hashed device IDs, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, service reliability, safety review, rate limits, and abuse prevention. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Convex**: Processes account IDs, display names, display-name audit records, selected app-owned avatar color values, invite metadata, contacts, encrypted messages, message metadata, message audit records, full-message sync logs, safety report records, hashed device IDs, App Attest security records, push tokens, public E2EE keys, and deletion request records. Purpose: backend database, server functions, real-time sync, service reliability, safety review, rate limits, security, and abuse prevention. The production Convex database is located in Ireland. Reference: [Convex Privacy Policy](https://www.convex.dev/legal/privacy), [Convex Data Processing Agreement](https://www.convex.dev/legal/dpa), and [Convex Subprocessors](https://www.convex.dev/legal/subprocessors).
+- **Cloudflare**: Processes App Attest requests and related network data, which may include IP address, hashed device ID, challenges, key identifiers, attestation and assertion objects, and request hashes. Purpose: verify Apple App Attest evidence before protected account or session operations reach Convex. Reference: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/) and [Cloudflare Data Processing Addendum](https://www.cloudflare.com/cloudflare-customer-dpa/).
 - **Clerk**: Processes authentication credentials, Clerk user IDs, session IDs, and authentication metadata. Purpose: account authentication and session management. Reference: [Clerk Privacy Policy](https://clerk.com/legal/privacy), [Clerk Data Processing Addendum](https://clerk.com/legal/dpa), and [Clerk Subprocessors](https://clerk.com/legal/subprocessors).
 - **Resend**: Processes account deletion notification email content sent to our administrator, currently limited to user ID and request timestamp. Purpose: operational notification so deletion requests can be processed. Reference: [Resend Privacy Policy](https://resend.com/legal/privacy-policy), [Resend Data Processing Addendum](https://resend.com/legal/dpa), and [Resend Subprocessors](https://resend.com/legal/subprocessors).
 - **Apple/APNs**: Processes push tokens and notification delivery data. Purpose: push notification delivery when you allow notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
+- **Apple App Attest**: Processes app and device-integrity attestation requests, key identifiers, and cryptographic challenge data. The App Attest framework generates subsequent assertions locally on your device. Purpose: help verify that protected requests originate from a valid InnerRing app instance on Apple hardware. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
 - **Apple App Store**: Processes purchase and subscription transaction data. Purpose: App Store billing, subscription management, refunds, entitlement verification, and subscription status notifications. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/) and [Apple Media Services Terms and Conditions](https://www.apple.com/legal/internet-services/itunes/).
 - **Apple iCloud**: Processes optional encrypted backup files if you enable iCloud backup. Purpose: user-controlled backup and restore. Reference: [Apple Privacy Policy](https://www.apple.com/legal/privacy/) and [iCloud Terms of Service](https://www.apple.com/legal/internet-services/icloud/).
 
@@ -116,7 +123,7 @@ These providers may process data in countries outside your country of residence.
 We share data only as needed to provide the service:
 
 - **Message recipients**: People you choose to contact can receive your encrypted messages and see your profile information needed for the conversation.
-- **Service providers**: Convex, Clerk, Resend, Apple/APNs, and Apple iCloud as described above.
+- **Service providers**: Convex, Cloudflare, Clerk, Resend, Apple/App Attest/APNs, and Apple iCloud as described above.
 - **Apple App Store**: Subscription purchase and entitlement information as described above.
 - **Authorities or legal recipients**: Information may be disclosed if required by law, court order, competent authority request, or mandatory safety-reporting obligation.
 - **Legal requirements**: If required by law, court order, or valid governmental request.
@@ -133,7 +140,7 @@ Because InnerRing does not use email addresses or phone numbers for account iden
 
 InnerRing is designed to support in-app data export while signed in. Server-side exports may include account data, device/session metadata, subscription identifiers and entitlement status, contact and conversation metadata, invite metadata, message metadata, reaction metadata, full-message sync logs, E2EE public-key metadata, and deletion request status.
 
-Server-side exports do not include plaintext message contents because we cannot decrypt ordinary messages. Standard server-side exports also exclude raw ciphertext, encryption headers, X3DH headers, encryption session IDs, and sealed safety-report context because these are technical cryptographic records or internal safety/legal records rather than ordinary account export data. Plaintext message history may exist only on your device and in your encrypted iCloud backup if enabled. If you voluntarily submit a message report, the reported content is handled as sealed safety-report context and is not included in ordinary export files.
+Server-side exports do not include plaintext message contents because we cannot decrypt ordinary messages. Standard server-side exports also exclude raw ciphertext, encryption headers, X3DH headers, encryption session IDs, App Attest keys, receipts, challenges, counters and replay-token records, and sealed safety-report context because these are technical security/cryptographic records or internal safety/legal records rather than ordinary account export data. Plaintext message history may exist only on your device and in your encrypted iCloud backup if enabled. If you voluntarily submit a message report, the reported content is handled as sealed safety-report context and is not included in ordinary export files.
 
 ### 7.2 Correction
 
@@ -153,7 +160,7 @@ For security, deletion requests are not accepted by unauthenticated email. If yo
 
 ### 8.1 Active Accounts
 
-We retain account, contact, encrypted message, message metadata, device, session, subscription entitlement, and E2EE public-key data while your account is active and the data is needed to provide the service.
+We retain account, contact, encrypted message, message metadata, device, session, App Attest security, subscription entitlement, and E2EE public-key data while your account is active and the data is needed to provide the service.
 
 ### 8.2 Messages and Reactions
 
@@ -167,7 +174,7 @@ When your account deletion is processed, we delete or remove access to:
 
 - Your Clerk authentication account.
 - Active sessions.
-- Push notification tokens and device records, including hashed device IDs.
+- Push notification tokens and app-linked device records, including their hashed device IDs.
 - Invite codes created by you.
 - E2EE signed prekeys and one-time prekeys.
 - Public identity keys stored on your Convex user record.
@@ -176,7 +183,9 @@ We anonymize your profile as "DELETED USER" and prevent future account access.
 
 Because conversations involve two participants, encrypted historical messages and minimal conversation metadata may remain available to the other participant after your account deletion. We retain this limited data under our legitimate interests to preserve the other participant's conversation history and the integrity of the messaging service.
 
-We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, hashed device IDs, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "DELETED USER" with the default app-owned avatar color, your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
+We limit the privacy impact of this retention by deleting your authentication account, sessions, push tokens, app-linked device records, invite codes, E2EE prekeys, and public identity keys. Your profile is shown as "DELETED USER" with the default app-owned avatar color, your account cannot be accessed again, and message contents remain end-to-end encrypted on the backend.
+
+App Attest security records are associated with an app installation and hashed device ID rather than directly with an InnerRing account. They may remain after account deletion where needed to verify device integrity, prevent replay, enforce rate limits, and investigate abuse.
 
 The retained conversation data may include user IDs, contact relationship IDs, timestamps, encrypted message records, message events, and read/edit/delete/reaction metadata. This retained data is pseudonymous personal data, not fully anonymous data.
 
