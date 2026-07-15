@@ -1,14 +1,30 @@
 # Safety at InnerRing
 
-**Last Updated: June 8, 2026**
+**Last Updated: July 15, 2026**
 
 InnerRing is a privacy-first, invite-only, 1:1 messaging app for close friends and family. This page explains the safety tools available in the app and how safety reports are handled.
 
 ## Privacy and Safety Model
 
-InnerRing uses end-to-end encryption for ordinary message contents. Message contents are encrypted before they leave your device, and we cannot routinely read plaintext messages from our backend.
+InnerRing uses end-to-end encryption for ordinary message contents. Ordinary messages are encrypted before they leave your device, and we cannot routinely read their plaintext from our backend.
 
 This privacy model means InnerRing does not proactively scan ordinary chat content. Safety controls are based on user reporting, blocking, display-name audit records, rate limits, account restrictions where justified, retention procedures, and legal or authority obligations.
+
+When you voluntarily report a received message, the app sends a plaintext snapshot of that selected message to InnerRing for safety review. The reported snapshot is protected in transit by HTTPS/TLS but is no longer protected from InnerRing by message end-to-end encryption.
+
+## Content Not Allowed
+
+InnerRing does not allow users to create, send, request, promote, facilitate, or link to:
+
+- Child sexual abuse or exploitation material, grooming, sexual solicitation of a child, or conduct that exploits, coerces, or endangers a child.
+- Pornographic or sexually explicit content.
+- Content encouraging, promoting, or providing instructions for suicide, self-harm, or eating disorders.
+- Credible threats, stalking, coercion, extortion, harassment, bullying, violence, or hatred.
+- Terrorism content or activity.
+- Fraud, scams, impersonation, recovery-key theft, malware, spam, or automated abuse.
+- Other illegal content or activity.
+
+These restrictions apply to every user, including adults.
 
 ## Reporting
 
@@ -17,13 +33,13 @@ You can report:
 - A received message from the message bubble menu.
 - A contact's display name from that contact's profile.
 
-When you report a message, InnerRing receives the selected reported message and report metadata for safety review. When you report a display name, InnerRing receives the selected profile name and report metadata for safety review.
+When you report a message, InnerRing receives a plaintext snapshot of the selected reported message and report metadata for safety review. The selected message is hidden from your normal chat view after successful submission. When you report a display name, InnerRing receives the selected profile name and report metadata for safety review.
 
 For child sexual exploitation, grooming, or urgent child-safeguarding categories, the app may ask whether anyone involved is in the United Kingdom, the United States, or whether that is unknown. We do not collect global location data to prove location links.
 
 ## Blocking
 
-You can block a contact as a privacy-preserving safety control. Blocking can hide affected messages from normal chat views and stop normal interaction with that contact where supported.
+You can block a contact as a privacy-preserving safety control. Blocking stops normal interaction with that contact where supported and can hide affected messages from normal chat views.
 
 Blocking does not necessarily delete records needed for delivery, sync, security, safety review, legal compliance, or record keeping.
 
@@ -33,9 +49,15 @@ Display names are user-editable. InnerRing keeps display-name audit records so r
 
 ## Account Restrictions
 
-InnerRing may restrict account actions such as messaging, reactions, invite creation, invite redemption, or public display-name changes where needed for safety, service integrity, or legal compliance.
+InnerRing may restrict account actions such as messaging, reactions, invite creation, invite redemption, or display-name changes where needed for safety, service integrity, or legal compliance.
 
-For alleged wrongdoing in end-to-end encrypted message contents, InnerRing does not restrict an account solely because of an unverified report unless required by a competent authority, court, regulator, or legal obligation.
+InnerRing does not treat an allegation as verified merely because it was reported. We assess the available report information and may take no action, close the report, reset an abusive display name, restrict or terminate account actions, remove or disable access to content or records where appropriate and technically possible, preserve evidence, or disclose information to a competent authority where permitted or required. We may act where the available evidence gives us a reasonable basis to believe the Terms or law were violated or urgent safety action is justified.
+
+## How Reports Are Handled
+
+We prioritize reports involving immediate danger, child safeguarding, child sexual exploitation, grooming, or credible threats. We review only the information available for the report, taking account of the limits created by end-to-end encryption and the possibility of mistaken or malicious reports.
+
+Possible outcomes include no action, closure, report-and-block handling, display-name reset, account restriction or termination, content or record access restriction where appropriate and technically possible, evidence preservation, and legal or authority escalation. We retain reports and related evidence according to the Privacy Policy and any applicable safeguarding or legal hold.
 
 ## Links in Messages
 
@@ -57,15 +79,15 @@ For users in the United Kingdom:
 
 - If there is immediate danger, call emergency services on 999.
 - For non-emergency police matters, use 101 or the relevant local police route.
-- For fraud or cybercrime, consider reporting to Action Fraud and contacting your bank or payment provider if money was involved.
+- For fraud or cybercrime, consider reporting to [Action Fraud](https://www.actionfraud.police.uk/) and contacting your bank or payment provider if money was involved.
 - For child-protection concerns, contact emergency services, police, or appropriate child-protection services.
 
 For users in the United States:
 
 - If there is immediate danger, call emergency services on 911.
-- For suspected child exploitation, consider reporting to the NCMEC CyberTipline.
-- For cyber-enabled fraud or scams, consider reporting to FBI IC3 or FTC ReportFraud and contacting your bank or payment provider if money was involved.
-- For self-harm or emotional crisis support, call or text 988.
+- For suspected child exploitation, consider reporting to the [NCMEC CyberTipline](https://report.cybertip.org/).
+- For cyber-enabled fraud or scams, consider reporting to [FBI IC3](https://www.ic3.gov/) or [FTC ReportFraud](https://reportfraud.ftc.gov/) and contacting your bank or payment provider if money was involved.
+- For self-harm or emotional crisis support, call or text [988](https://988lifeline.org/).
 
 You may still use InnerRing's in-app reporting tools so we can review and preserve the available report information.
 
@@ -85,8 +107,14 @@ InnerRing may preserve records, submit legally required reports, and follow comp
 
 Use the in-app reporting tools for message reports and display-name reports. In-app reports are the safest way to send us the relevant reported content and account context.
 
-For safety complaints, policy questions, or concerns about how a report was handled, contact:
+You may complain about how we handled or failed to handle a safety report; a content, display-name, account-restriction, suspension, or termination decision affecting you; difficulty accessing the reporting process; or how we applied our Terms or safety policies.
+
+Email us with the subject "Safety complaint." Include the report ID if you have it, the decision or problem you want reviewed, and why you believe the outcome should change:
 
 **Email**: [innerring.app@gmail.com](mailto:innerring.app@gmail.com)
 
-Please do not send your recovery key. Email is not sufficient to verify account ownership, so account deletion and data export must use the in-app controls while signed in.
+Please do not send your recovery key. Email is not sufficient to verify account ownership, so identity-sensitive action may require verification through the signed-in app.
+
+We will review the available record as soon as reasonably practicable, conduct a fresh review of the relevant evidence and policy application, and update the report or outcome where justified. We may be unable to disclose confidential information about another person, authority activity, safeguarding steps, or internal security controls.
+
+Privacy complaints may also be made to the data-protection regulator described in our Privacy Policy. InnerRing's complaint route does not replace your right to contact an emergency service, law-enforcement body, regulator, court, or other competent authority.
