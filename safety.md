@@ -1,6 +1,6 @@
 # Safety at InnerRing
 
-**Last Updated: July 15, 2026**
+**Last Updated: July 16, 2026**
 
 InnerRing is a privacy-first, invite-only, 1:1 messaging app for close friends and family. This page explains the safety tools available in the app and how safety reports are handled.
 
@@ -45,7 +45,9 @@ Blocking does not necessarily delete records needed for delivery, sync, security
 
 ## Display Names
 
-Display names are user-editable. InnerRing keeps display-name audit records so reported name abuse can be reviewed. If a display name is verified as abusive or unsafe, we may reset it to a neutral generated name.
+Display names are user-editable, but names containing "InnerRing" are reserved for official service use. Capitalization, spacing, punctuation, or similar formatting does not make an InnerRing name variant available for user accounts.
+
+InnerRing keeps display-name audit records so reported name abuse can be reviewed. If a display name is verified as abusive or unsafe, we may reset it to a neutral generated name.
 
 ## Account Restrictions
 

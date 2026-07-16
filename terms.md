@@ -1,6 +1,6 @@
 # Terms of Service for InnerRing
 
-**Last Updated: July 15, 2026**
+**Last Updated: July 16, 2026**
 
 InnerRing ("we," "our," or "us") is a privacy-first, invite-only, 1:1 messaging app for close friends and family. By using InnerRing, you agree to these Terms.
 
@@ -48,6 +48,7 @@ You must not use InnerRing to create, send, request, promote, facilitate, or lin
 You must not:
 
 - Misrepresent your identity or use display names for abuse, threats, scams, or exploitation.
+- Use a display name containing "InnerRing," including capitalization, spacing, punctuation, or similar formatting variants. InnerRing brand names are reserved for official service use.
 - Attempt to bypass security, encryption protections, App Attest, rate limits, subscription gates, or access controls.
 - Probe, disrupt, overload, reverse engineer where prohibited by law, or interfere with the service or another person's use of it.
 - Use automated clients or operate InnerRing in a way that creates unreasonable service, security, or safety risk.
