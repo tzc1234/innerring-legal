@@ -4,7 +4,7 @@ Legal documents for InnerRing, a privacy-first 1:1 messaging app for close frien
 
 - [Privacy Policy](privacy.html)
 - [Terms of Service](terms.html)
-- [Safety and Complaints](safety.html)
+- [Safety](safety.html)
 
 ## Contact
 
